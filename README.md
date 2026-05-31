@@ -1,2 +1,15 @@
 # Bugd   
-Node.js 20 actions are deprecated. The following actions are running on Node.js 20 and may not work as expected: actions/checkout@v4, actions/setup-java@v4. Actions will be forced to run with Node.js 24 by default starting June 16th, 2026. Node.js 20 will be removed from the runner on September 16th, 2026. Please check if updated versions of these actions are available that support Node.js 24. To opt into Node.js 24 now, set the FORCE_JAVASCRIPT_ACTIONS_TO_NODE24=true environment variable on the runner or in your workflow file. Once Node.js 24 becomes the default, you can temporarily opt out by setting ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+Act as a Principal Android Engineer. We need to update our CI workflow file to eliminate the Node.js 20 deprecation warnings ahead of GitHub's runtime enforcement. 
+
+Your Task:
+Please open '.github/workflows/build-apk.yml' and perform the following version upgrades:
+
+1. Locate the checkout step:
+   Change 'actions/checkout@v4' to 'actions/checkout@v5' (or newer version targeting Node 24).
+
+2. Locate the Java setup step:
+   Change 'actions/setup-java@v4' to the latest available major version that supports Node 24 (or if @v4 has a specific updated patch/minor version or if @v5 is released, apply that update). 
+
+3. Additionally, if we are using 'actions/upload-artifact@v4', ensure it is bumped if a Node 24 compatible replacement version exists.
+
+Apply these modifications cleanly directly to the YAML stream. Provide a brief summary table of the version updates when complete.
